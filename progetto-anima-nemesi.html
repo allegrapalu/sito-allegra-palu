@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anima e Nemesi — Allegra Palù</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{
+  --crema:#FAF6F1;
+  --rosa:#C9A49A;
+  --rosa-chiaro:#EDD8D3;
+  --rosa-pallido:#F5EDEA;
+  --terracotta:#B98C7A;
+  --terracotta-dark:#A07560;
+  --inchiostro:#4A3530;
+  --muted:#8A7572;
+  --border:#E2D5D1;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--crema);color:var(--inchiostro);font-weight:300;font-size:16px;line-height:1.7;}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;
+  background:var(--crema);border-bottom:1px solid var(--border);
+}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;color:var(--inchiostro);text-decoration:none;}
+.back{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.back:hover{color:var(--terracotta-dark);}
+
+.cover{width:100%;height:60vh;object-fit:cover;display:block;margin-top:64px;background:var(--rosa-chiaro);}
+
+.container{max-width:700px;margin:0 auto;padding:5rem 2rem 7rem;}
+.eyebrow{font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--terracotta-dark);margin-bottom:1.5rem;}
+.title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:400;font-style:italic;line-height:1.2;margin-bottom:1.2rem;color:var(--inchiostro);}
+.subtitle{font-size:0.85rem;color:var(--muted);letter-spacing:0.04em;margin-bottom:2.5rem;}
+.opening{font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;line-height:1.6;color:var(--terracotta-dark);border-left:2px solid var(--terracotta);padding-left:1.5rem;margin-bottom:3.5rem;}
+
+h2.h{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;margin:3rem 0 1.2rem;color:var(--inchiostro);}
+p{font-size:1rem;line-height:1.85;color:var(--inchiostro);margin-bottom:1.3rem;}
+
+.quadro{margin-bottom:2.5rem;padding:1.8rem 2rem;background:var(--rosa-pallido);border-radius:3px;}
+.quadro-n{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--terracotta-dark);margin-bottom:0.5rem;}
+.quadro-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;color:var(--inchiostro);margin-bottom:0.8rem;}
+.quadro-meta{font-size:0.78rem;color:var(--muted);margin-bottom:1rem;}
+.quadro-excerpt{font-family:'Playfair Display',serif;font-size:1.02rem;line-height:1.75;color:var(--inchiostro);font-style:italic;}
+
+.credits{margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border);}
+.credits-row{display:flex;justify-content:space-between;font-size:0.85rem;padding:0.5rem 0;color:var(--muted);}
+.credits-row b{color:var(--inchiostro);font-weight:400;}
+
+.divider{width:40px;height:1px;background:var(--terracotta);margin:4rem 0;}
+.back-link{display:inline-block;font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--terracotta);padding-bottom:2px;}
+
+footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--rosa-chiaro);}
+footer span{font-size:0.72rem;color:var(--muted);}
+
+@media (max-width:768px){
+  nav{padding:1rem 1.5rem;}
+  .container{padding:3.5rem 1.5rem 5rem;}
+  .quadro{padding:1.4rem 1.5rem;}
+  footer{flex-direction:column;gap:0.5rem;text-align:center;padding:2rem 1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Allegra Palù</a>
+  <a href="index.html#percorsi" class="back">← percorsi di ricerca</a>
+</nav>
+
+<!-- Immagine di copertina: sostituisci con una foto reale dello spettacolo -->
+<img class="cover" src="danza.jpg" alt="Anima e Nemesi" onerror="this.style.display='none'">
+
+<div class="container">
+  <span class="eyebrow">Performance — testo e corpo</span>
+  <h1 class="title">Anima e Nemesi</h1>
+  <p class="subtitle">Testo per performance — 3 voci, 2 corpi, 1 integrazione</p>
+
+  <p class="opening">Il doppio, la parte oscura, l'integrazione dell'ombra come via verso la completezza del sé.</p>
+
+  <p>Un testo costruito per due corpi e una voce narrante, ispirato a <em>Demian</em> di Hermann Hesse e a "Anima e Nemesi" di Marracash. Anima e Nemesi non sono personaggi: sono le due metà di una stessa persona — la parte che si trattiene e la parte che esplode — che nel corso di quattro quadri imparano a riconoscersi.</p>
+
+  <p>Il testo si muove a barre, come un flusso ritmico continuo, con riferimenti musicali specifici per ogni quadro. Le parole scelte non sono solo immagini: alcune attivano risposte neurofisiologiche misurabili, lo stesso principio di lavoro alla base di Cartografia del Gesto — corpo, carne, movimento, gesto coinvolgono la corteccia premotoria e il sistema dei neuroni specchio.</p>
+
+  <h2 class="h">I quattro quadri</h2>
+
+  <div class="quadro">
+    <div class="quadro-n">Quadro 1</div>
+    <div class="quadro-title">Estranee</div>
+    <div class="quadro-meta">Il dissidio somatico — Anima lavora sulla stasi, Nemesi sulla furia</div>
+    <p class="quadro-excerpt">"Siamo qui. Estranee. Nello stesso sistema, nello stesso buio. Nessuna delle due sa ancora che l'altra... è la strada, è il futuro."</p>
+  </div>
+
+  <div class="quadro">
+    <div class="quadro-n">Quadro 2</div>
+    <div class="quadro-title">Nemesi</div>
+    <div class="quadro-meta">Ritmo serrato, martellante, senza fiato</div>
+    <p class="quadro-excerpt">"Il doppio è il mio specchio, il mio inizio e la mia fine, ora sono pronta a danzare tra le mie stesse rovine."</p>
+  </div>
+
+  <div class="quadro">
+    <div class="quadro-n">Quadro 3</div>
+    <div class="quadro-title">Anima</div>
+    <div class="quadro-meta">Fluidità interrotta, lirismo malinconico</div>
+    <p class="quadro-excerpt">"Anima finalmente libera, Anima fatta di luce, il corpo riprende il dominio, il caos si riduce."</p>
+  </div>
+
+  <div class="quadro">
+    <div class="quadro-n">Quadro 4</div>
+    <div class="quadro-title">Sorelle</div>
+    <div class="quadro-meta">Contatto totale, simmetria, unione</div>
+    <p class="quadro-excerpt">"Siamo intere, siamo vive, siamo il moto che resta, in questa stanza vuota che diventa una festa."</p>
+  </div>
+
+  <h2 class="h">La cornice scientifica</h2>
+  <p>Come in Cartografia del Gesto, anche qui il corpo non è metafora: è strumento di conoscenza. Le parole in grassetto nel testo originale corrispondono a stimoli neurofisiologici precisi — battito, respiro, sangue agiscono sul sistema nervoso autonomo attraverso il nervo vago; dualismo e scissione nominano il problema cartesiano che la performance risolve, letteralmente, nel corpo.</p>
+
+  <div class="credits">
+    <div class="credits-row"><span>Riferimento bibliografico</span><b>Hermann Hesse, Demian (1919)</b></div>
+    <div class="credits-row"><span>Riferimento musicale</span><b>Anima e Nemesi — Marracash</b></div>
+  </div>
+
+  <div class="divider"></div>
+  <a href="index.html#percorsi" class="back-link">← torna ai percorsi di ricerca</a>
+</div>
+
+<footer>
+  <span>Allegra Palù — comunicazione culturale</span>
+  <span>Friuli Venezia Giulia</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La danza non è mai solo danza — Allegra Palù</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --cream: #FAF6F1;
+    --dark: #4A3530;
+    --mid: #8A7572;
+    --accent: #A07560;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--dark);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cream);
+    border-bottom: 0.5px solid rgba(26,26,24,0.08);
+  }
+
+  nav .logo {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--dark);
+    text-decoration: none;
+  }
+
+  nav .back {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  nav .back:hover { color: var(--dark); }
+
+  .post-hero {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    margin-top: 64px;
+  }
+
+  .post-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 5rem 2rem 8rem;
+  }
+
+  .post-meta {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+
+  .post-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.25;
+    margin-bottom: 3rem;
+    color: var(--dark);
+  }
+
+  .post-body p {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--dark);
+    margin-bottom: 1.8rem;
+  }
+
+  .post-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .post-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin: 4rem 0;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mid);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover { color: var(--dark); }
+
+  footer {
+    padding: 2rem 3rem;
+    border-top: 0.5px solid rgba(26,26,24,0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer span { font-size: 0.75rem; color: var(--mid); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1.2rem 1.5rem; }
+    .post-hero { height: 50vh; }
+    .post-container { padding: 3rem 1.5rem 6rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Allegra Palù</a>
+  <a href="index.html#blog" class="back">← scritture</a>
+</nav>
+
+<!-- FOTO DEL POST
+     Rinomina la tua foto: danza.jpg
+     e mettila nella stessa cartella -->
+<img class="post-hero" src="danza.jpg" alt="La danza non è mai solo danza">
+
+<div class="post-container">
+  <p class="post-meta">aprile 2026</p>
+  <h1 class="post-title">La danza non è mai solo danza</h1>
+
+  <div class="post-body">
+    <p>Me lo ricordo quel giorno, ero a pezzi. Il mondo dentro faceva un rumore insopportabile e l'unico modo che avevo per zittirlo era danzare. Non per performare, non per cercare la perfezione che spesso ci imprigiona, ma solo per esistere.</p>
+    <p>In quel luogo sospeso che amo, ho lasciato che il corpo prendesse il sopravvento. Ho ascoltato il peso dei piedi che premevano sul pavimento, quel richiamo costante alla terra che diceva "sono qui", anche quando la mente voleva sparire. Ho lasciato che il movimento spettinasse i miei pensieri, trasformando il dolore in una forma che potesse finalmente abitare lo spazio.</p>
+    <p>"La danza non è mai solo danza", lo dico oggi, lo sento da sempre. È un atto selvaggio d'amore verso il proprio caos. È l'unica lingua capace di tradurre ciò che le parole, troppo rigide, non riescono a dire. È un esercizio di verità: richiede di spogliarsi di ogni sovrastruttura per arrivare al nucleo di chi siamo.</p>
+    <p>C'è una bellezza cruda in questo processo: la capacità di fare della propria fragilità la propria forza scenica. Come dice Lana, "we have nothing to lose". Non abbiamo nulla da perdere se non la paura di sentirci, di essere libere, di fare della nostra esistenza un'opera d'arte in continuo divenire.</p>
+    <p>Questa consapevolezza è ciò che porto nel mio lavoro di ogni giorno. Quando mi occupo di organizzazione, di comunicazione, di narrazione per la danza, non sto solo gestendo un progetto: sto proteggendo quello spazio sacro. Sto cercando di far sì che quel "respiro" che ho trovato in sala non vada perduto, ma trovi il modo di raggiungere qualcun altro.</p>
+    <p>Oggi rivivo quel momento, lo affido al mare, al vento, e lo metto a disposizione del tuo lavoro. Perché se la danza è il modo in cui abitiamo il mondo, la mia missione è fare in modo che quel mondo sia visibile, ascoltato e profondamente compreso.</p>
+  </div>
+
+  <div class="post-divider"></div>
+  <a href="index.html#blog" class="back-link">← torna alle scritture</a>
+</div>
+
+<footer>
+  <span>Allegra Palù — comunicazione culturale</span>
+  <span>Friuli Venezia Giulia</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R e R — first meet — Allegra Palù</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --cream: #FAF6F1;
+    --dark: #4A3530;
+    --mid: #8A7572;
+    --accent: #A07560;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--dark);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cream);
+    border-bottom: 0.5px solid rgba(26,26,24,0.08);
+  }
+
+  nav .logo {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--dark);
+    text-decoration: none;
+  }
+
+  nav .back {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  nav .back:hover { color: var(--dark); }
+
+  .post-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 8rem 2rem 8rem;
+  }
+
+  .post-meta {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+
+  .post-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.25;
+    margin-bottom: 3rem;
+    color: var(--dark);
+  }
+
+  .post-body p {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--dark);
+    margin-bottom: 1.8rem;
+  }
+
+  .post-body p:last-child { margin-bottom: 0; }
+
+  .post-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin: 4rem 0;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mid);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover { color: var(--dark); }
+
+  footer {
+    padding: 2rem 3rem;
+    border-top: 0.5px solid rgba(26,26,24,0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer span { font-size: 0.75rem; color: var(--mid); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1.2rem 1.5rem; }
+    .post-container { padding: 6rem 1.5rem 6rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Allegra Palù</a>
+  <a href="index.html#blog" class="back">← scritture</a>
+</nav>
+
+<!-- Foto del post: rinomina la tua immagine rer.jpg -->
+<img class="post-hero" src="rer.jpg" alt="Le anime non si incontrano mai per caso" style="width:100%;height:70vh;object-fit:cover;object-position:center;display:block;margin-top:64px;">
+
+<div class="post-container">
+  <p class="post-meta">estate 2016</p>
+  <h1 class="post-title">R e R — first meet</h1>
+
+  <div class="post-body">
+    <p>Era il 2016, vivevo a Torino per studiare ed ero la tirocinante al Festival delle Colline. Correva l'estate, una splendida estate — ed era il periodo appena pre-festival, quello che negli anni è diventato un periodo tostissimo, ancora più del festival stesso, dove le giornate sembrano infinite.</p>
+    <p>Quel pomeriggio dovevamo andare a vedere le prove generali di una compagnia che avrebbe debuttato al festival — una compagnia locale, molto famosa a Torino, folli al punto giusto. Poi sarei tornata a casa, la coinquilina cinese avrebbe preparato la cena per tutte. La mia giornata avrebbe potuto concludersi così.</p>
+    <p>La sera prima ero uscita. Mi sembrava come se fosse la mia ultima notte in libertà. Dopo sarebbe iniziato il festival, avrei avuto gli esami — bene ma non benissimo. Il rientro a casa coincise circa con il sorgere del sole. Quella mattina la mia compagna di stanza decise che dovevo alzarmi anche io, assolutamente, per andare a Porta Palazzo a fare la spesa. Ho provato in tutte le maniere a opporre resistenza, con un successo inutile.</p>
+    <p>Non capivo nemmeno chi ero. Anche il caffè mi faceva male. Metto su gli occhiali scuri, sperando mi coprissero anche l'anima. Mi vesto completamente a caso: t-shirt adolescenziale con scritto in rosa fluorescente "come with me far away from this noise", pantaloni gialli fluorescenti e scarpe rosa fluo. Con l'aspettativa di fare giusto un pomeriggio e tornare a morire a casa.</p>
+    <p>"Laura non può venire a Vercelli, ha il figlio che sta male. Ragazze, chi di voi due ha voglia di venire?" In pieno malessere, vestita da adolescente, decido di partire. Scrivo alla mia coinquilina: "sei pazza A., manco ti stai a reggere in piedi."</p>
+    <p>Arriviamo in questa fantomatica Vercelli. Entriamo. Cazzo. Sono tutte e tutti di una bellezza allucinante. Abiti ricercatissimi ed eleganti. Per la prima volta mi sono davvero vergognata del mio outfit.</p>
+    <p>Ci dicono che possiamo scendere nel seminterrato e che la prova avrebbe avuto inizio. Mi siedo, vedo lei. Vestita in nero con un meraviglioso corpetto. Inizia a parlare — anzi, a recitare. In maniera sublime, senza mezzi termini: sublime. Una voce meravigliosa, che ti incanta, incolla, ti fa sognare, viaggiare, amare. Era impossibile toglierle gli occhi di dosso.</p>
+    <p>Credo sia durato poco meno di un'ora. Una delle più belle della mia vita. Avevo vent'anni, vivevo in una città stupenda, ero tirocinante di un festival fighissimo, e avevo la possibilità di essere lì — a vivere quel momento intimo e irripetibile. Era: <em>How to explain theatre to a living dog</em> — Roberta va sulla Luna.</p>
+    <p>Il regista, Renato, uomo di tantissime parole, era interessantissimo. Avrei potuto ascoltarlo per ore. Poi torna lei, Roberta — l'attrice, fuori dalla scena, una donna estremamente silenziosa. Non so se timida, non l'ho ancora capito. Ho fatto tantissima fatica a collegare la persona all'attrice. Solo dopo ore avrei capito che la prima Roberta che avevo visto in ingresso era la medesima di tutte quelle scene.</p>
+    <p>Alla fine, avviandoci verso le scale, Renato dice: "beh, comunque interessantissima questa nuova stagione dopo vent'anni di Twin Peaks." David Lynch. Abbozzai una risposta che non ricordo, ma che suscitò entusiasmo nei suoi occhi.</p>
+    <p>Ci siamo rivisti a Torino. Nel corso delle settimane avevo capito che loro sarebbero stati la mia tesi di laurea. Li ho seguiti in moltissime prove e moltissimi spettacoli, avrei percorso chilometri senza mai pentirmene. Nel corso di quella notte — di quella magica notte — si creò una splendida amicizia destinata a durare ancora oggi, insieme a un profondissimo rispetto lavorativo.</p>
+  </div>
+
+  <div class="post-divider"></div>
+  <a href="index.html#blog" class="back-link">← torna alle scritture</a>
+</div>
+
+<footer>
+  <span>Allegra Palù — comunicazione culturale</span>
+  <span>Friuli Venezia Giulia</span>
+</footer>
+
+</body>
+</html>
