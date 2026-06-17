@@ -34,17 +34,27 @@ nav{
 
 .container{max-width:700px;margin:0 auto;padding:5rem 2rem 7rem;}
 .eyebrow{font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--terracotta-dark);margin-bottom:1.5rem;}
-.title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:400;font-style:italic;line-height:1.2;margin-bottom:2.5rem;color:var(--inchiostro);}
-.opening{font-family:'Playfair Display',serif;font-size:1.45rem;font-style:italic;line-height:1.6;color:var(--terracotta-dark);border-left:2px solid var(--terracotta);padding-left:1.5rem;margin-bottom:3.5rem;}
+.title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:400;font-style:italic;line-height:1.2;margin-bottom:0.6rem;color:var(--inchiostro);}
+.subtitle{font-size:0.85rem;color:var(--muted);letter-spacing:0.04em;margin-bottom:2.5rem;}
+.opening{font-family:'Playfair Display',serif;font-size:1.45rem;font-style:italic;line-height:1.6;color:var(--terracotta-dark);border-left:2px solid var(--terracotta);padding-left:1.5rem;margin-bottom:1rem;}
+.opening-strong{font-family:'Playfair Display',serif;font-size:1.2rem;font-style:italic;font-weight:700;color:var(--inchiostro);margin-bottom:3rem;padding-left:1.5rem;}
 
 h2.h{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;margin:3rem 0 1.2rem;color:var(--inchiostro);}
 p{font-size:1rem;line-height:1.85;color:var(--inchiostro);margin-bottom:1.3rem;}
 .quote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;color:var(--muted);margin:0.5rem 0 1.8rem;}
 .quote span{display:block;font-size:0.78rem;font-style:normal;letter-spacing:0.08em;text-transform:uppercase;color:var(--terracotta-dark);margin-top:0.5rem;}
 
+.video-block{margin:2.5rem 0 3rem;}
+.video-block .video-wrap{position:relative;width:100%;padding-top:56.25%;background:var(--rosa-chiaro);border-radius:3px;overflow:hidden;}
+.video-block .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.video-caption{font-size:0.78rem;color:var(--muted);margin-top:0.7rem;}
+
 .credits{margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border);}
-.credits-row{display:flex;justify-content:space-between;font-size:0.85rem;padding:0.5rem 0;color:var(--muted);}
-.credits-row b{color:var(--inchiostro);font-weight:400;}
+.credits-row{display:flex;justify-content:space-between;font-size:0.85rem;padding:0.5rem 0;color:var(--muted);gap:1rem;}
+.credits-row b{color:var(--inchiostro);font-weight:400;text-align:right;}
+
+.refs{margin-top:2.5rem;}
+.refs p{font-size:0.85rem;color:var(--muted);margin-bottom:0.5rem;line-height:1.6;}
 
 .divider{width:40px;height:1px;background:var(--terracotta);margin:4rem 0;}
 .back-link{display:inline-block;font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--terracotta);padding-bottom:2px;}
@@ -55,6 +65,8 @@ footer span{font-size:0.72rem;color:var(--muted);}
 @media (max-width:768px){
   nav{padding:1rem 1.5rem;}
   .container{padding:3.5rem 1.5rem 5rem;}
+  .credits-row{flex-direction:column;gap:0.2rem;}
+  .credits-row b{text-align:left;}
   footer{flex-direction:column;gap:0.5rem;text-align:center;padding:2rem 1.5rem;}
 }
 </style>
@@ -70,42 +82,82 @@ footer span{font-size:0.72rem;color:var(--muted);}
 <img class="cover" src="ritratto.jpg" alt="Cartografia del Gesto" onerror="this.style.display='none'">
 
 <div class="container">
-  <span class="eyebrow">Ricerca artistica itinerante</span>
+  <span class="eyebrow">Dossier di ricerca artistica · maggio 2026</span>
   <h1 class="title">Cartografia del Gesto</h1>
 
-  <p class="opening">Mi ricordo: l'inizio fu amore subito. Un brivido nelle dita. Un braccio che si alzava andando a toccare il cielo con l'estensione di tutte le falangi.</p>
+  <p class="opening">Mi ricordo: l'inizio fu amore subito.<br>Un brivido nelle dita. Un braccio che si alzava andando a toccare il cielo con l'estensione di tutte le falangi. La colonna vertebrale, mobile, elastica, che conduceva il busto a muoversi con grazia — seguendo il vento e le onde dell'oceano.</p>
+  <p class="opening-strong">Quello fu il concepimento.</p>
 
-  <p>C'è una frattura che attraversa la cultura occidentale da secoli. Il dualismo cartesiano ha lasciato un'eredità profonda: il corpo ridotto a strumento, la conoscenza relegata alla sola sfera razionale. Il risultato è visibile ovunque — corpi da ufficio, corpi da schermo, corpi abituati a occupare il minimo spazio possibile.</p>
-
-  <p>Cartografia del Gesto nasce da una domanda semplice e radicale: cosa succederebbe se il corpo ricevesse il permesso — non attraverso un'istruzione tecnica, ma attraverso una narrazione — di ricordarsi di sé?</p>
-
+  <h2 class="h">La domanda</h2>
   <p class="quote">"Prima danza, poi pensa. È l'ordine naturale delle cose."<span>Samuel Beckett</span></p>
+  <p>C'è una frattura che attraversa la cultura occidentale da secoli. Il dualismo cartesiano, quella separazione netta tra res cogitans e res extensa, tra mente pensante e corpo materiale, ha lasciato un'eredità profonda: il corpo ridotto a strumento, la conoscenza relegata alla sola sfera razionale. Come osserva Merleau-Ponty in <em>Fenomenologia della percezione</em>, questa dicotomia ha favorito una «tendenza disincarnata, de-corporeizzata» delle società occidentali, in cui il corpo viene concepito come oggetto tra gli altri oggetti, anziché come sede primaria dell'esperienza e del sapere.</p>
+  <p>Il risultato, oggi, è visibile: corpi da ufficio, corpi da schermo, corpi abituati a occupare il minimo spazio possibile. La danza contemporanea esiste, crea, grida — eppure resta per molti un linguaggio sconosciuto, incomprensibile, distante. Il gesto, lentamente, è diventato estraneo.</p>
+  <p>Cartografia del Gesto nasce da questa osservazione e da una domanda semplice, radicale: cosa succederebbe se il corpo ricevesse il permesso — non attraverso un'istruzione tecnica, ma attraverso una narrazione — di ricordarsi di sé?</p>
 
-  <h2 class="h">Il percorso</h2>
-  <p>Tutto comincia a Fuerteventura, dove per la prima volta una voce ascoltata produce nel corpo un movimento spontaneo, non cercato, necessario. Non una tecnica appresa: un ricordo.</p>
-  <p>Da lì un processo lungo nove mesi. In Italia, lezioni di danza vissute prima come spettatrice, poi come corpo che sperimenta. A Lisbona, mesi in contatto con due scuole di danza, approfondendo la pratica somatica con maestri che lavorano su temi urgenti: il corpo come sede della conoscenza, il gesto come linguaggio pre-verbale.</p>
-  <p>A Fuerteventura si torna, e qualcosa si chiude — o forse si apre. Nasce il testo: <em>Cara Amica</em>.</p>
+  <h2 class="h">Il percorso di ricerca</h2>
+  <p class="quote">"Habitus: seconda natura, una memoria tanto profonda che il corpo ricorderà sempre."<span>Lacy M. Johnson</span></p>
+  <p>Dopo il concepimento, la gestazione. Nove mesi in cui il corpo diventa laboratorio, la scienza diventa compagna di viaggio, e il gesto umano si svela lentamente come il linguaggio più antico che esista.</p>
+  <p>Tutto comincia a Fuerteventura, dove per la prima volta una voce ascoltata produce nel corpo un movimento spontaneo, non cercato, necessario. Non una tecnica appresa. Un ricordo. Come se il corpo avesse aspettato solo il giusto stimolo per parlare.</p>
+  <p>Da lì inizia un processo lungo nove mesi. In Italia frequento lezioni di danza come spettatrice prima, poi come corpo che sperimenta. Osservo, ascolto, percepisco. Mi avvicino alla pratica somatica — quell'approccio al movimento che parte dall'interno, dall'ascolto profondo, non dalla forma esteriore.</p>
+  <p>A Lisbona trascorro mesi in contatto con due scuole di danza, approfondendo con maestri che lavorano sulla somatica temi che sento urgenti: il corpo come sede della conoscenza, il gesto come linguaggio pre-verbale, il movimento come forma di elaborazione emotiva.</p>
+  <p>A Fuerteventura torno, e qualcosa si chiude — o forse si apre. La gestazione di nove mesi produce il suo parto: il testo <em>Cara Amica</em>.</p>
 
-  <h2 class="h">Il metodo</h2>
-  <p>La ricerca si muove sulla frontiera tra danza somatica e neuroscienze cognitive. Il punto di partenza è Merleau-Ponty: il corpo non è un oggetto nel mondo, ma la nostra maniera di abitarlo. È in questa distinzione — tra il corpo che siamo e il corpo che abbiamo — che si radica l'intera ricerca.</p>
-  <p>Le neuroscienze confermano l'intuizione: la teoria dell'embodied cognition mostra che il pensiero non abita solo la testa, abita il corpo intero. Quando ascoltiamo "tirare una rete" o "sollevare le braccia verso il cielo", la corteccia premotoria si attiva come se stessimo davvero compiendo quell'azione.</p>
+  <h2 class="h">Il metodo: corpo e scienza a braccetto</h2>
+  <p>Cartografia del Gesto si muove sulla frontiera tra due saperi che spesso si ignorano: la danza nella sua dimensione somatica e le neuroscienze cognitive. Non si tratta di illustrare l'una con l'altra, ma di lasciarle camminare insieme — perché parlano della stessa cosa con lingue diverse.</p>
+  <p>Il punto di partenza è fenomenologico. Merleau-Ponty, in <em>Fenomenologia della percezione</em>, rovescia il primato cartesiano affermando che il corpo non è un oggetto nel mondo, ma la nostra maniera di abitarlo: «il mio corpo è il perno del mondo». Distingue il corpo vissuto — il Leib, il corpo che siamo — dal corpo-oggetto, il Körper, il corpo che abbiamo. È in questa distinzione che si radica l'intera ricerca: Cartografia del Gesto lavora sul Leib, sul corpo che sa, che sente, che ricorda prima ancora che la mente nomini.</p>
+  <p>Le neuroscienze confermano questa intuizione fenomenologica. La teoria dell'Embodied Cognition — cognizione incarnata — afferma che il pensiero non abita la testa: abita il corpo intero. I meccanismi neurali che consentono di percepire e di muoversi sono gli stessi che danno forma ai sistemi concettuali (Gallese, Lakoff, 2005). Quando ascoltiamo «tirare una rete» o «sollevare le braccia verso il cielo», la corteccia premotoria si attiva come se stessimo davvero compiendo quell'azione. I neuroni specchio non distinguono tra il fare e il sentire fare.</p>
+  <p>A questo si aggiunge la Motor Imagery — immaginazione motoria — che attiva le stesse vie neurali dell'esecuzione reale (Berthoz, 1997). Le metafore di resistenza nel testo — l'acqua densa, le reti pesanti, l'onda che si rompe — non sono ornamenti letterari: sono stimoli biomeccanici che il sistema nervoso elabora come forze reali.</p>
+  <p>Infine, il nervo vago. Agire su distretti specifici del corpo — la mascella, le spalle, lo sterno — permette di regolare il sistema nervoso autonomo, di abbassare la guardia biologica, di entrare in uno stato in cui il movimento può fluire senza l'interferenza del giudizio critico. Damasio chiama questo processo il marcatore somatico: il corpo segna, registra, ricorda prima ancora che la mente nomini (Damasio, 1994).</p>
+  <p>Il testo Cara Amica è costruito su questi tre pilastri. Ogni parola è scelta non solo per quello che significa, ma per quello che fa — nel muscolo, nel respiro, nel sistema nervoso.</p>
 
   <h2 class="h">Cara Amica — il formato</h2>
-  <p>Cara Amica è una lettera scritta con il corpo, indirizzata a un'assenza. La forma epistolare genera intimità immediata, abbassa le resistenze, crea uno spazio in cui il corpo si sente al sicuro per muoversi.</p>
-  <p>Dentro la narrazione vivono istruzioni — alcune esplicite, alcune nascoste nella texture della lingua. Il lettore segue la storia, ma il corpo segue le istruzioni. Il movimento emerge senza che venga imposto.</p>
+  <p><strong>Cara Amica è una lettera con il corpo.</strong></p>
+  <p>È una lettera scritta con il corpo, indirizzata a un'assenza, a una persona lontana, a qualcuno che non c'è. La forma epistolare non è decorativa: genera intimità immediata, abbassa le resistenze, crea uno spazio emotivo in cui il corpo si sente al sicuro per muoversi.</p>
+  <p>All'interno della narrazione vivono istruzioni, alcune esplicite, alcune nascoste nella texture della lingua. «Tira verso di te», «incurva la schiena», «muovi solo i polpastrelli»: il lettore o l'ascoltatore segue la storia, ma il corpo segue le istruzioni. Il movimento emerge senza che venga imposto. È quello che Thomas Hanna definisce il campo proprio delle pratiche somatiche: «l'arte e la scienza dei processi di interazione sinergica tra la coscienza, il funzionamento biologico e l'ambiente» — solo che qui lo strumento è la narrazione, non il movimento guidato.</p>
+  <p>Questo è il contributo originale della ricerca: non mappare il territorio teorico già esplorato dalle neuroscienze e dalla fenomenologia, ma costruire uno strumento concreto che lo abiti. Un testo scritto parola per parola affinché corpi estranei alla danza usassero il proprio corpo. Ogni singola scelta lessicale è stata pensata per attivare, non per descrivere.</p>
+  <p>Cara Amica è pensata come un atto poetico che si ripete e si trasforma. Ogni futura tappa della ricerca produrrà un nuovo testo che ne prenderà le sembianze — una nuova lettera, un nuovo corpo, un nuovo paesaggio emotivo. La forma resta. Il contenuto evolve con la ricerca.</p>
 
-  <h2 class="h">La sperimentazione</h2>
-  <p>Prima di portare Cara Amica in uno spazio pubblico, il testo è stato testato su corpi reali: un gruppo di volontarie che nella vita non danzano, riunite in un parco, in un ambiente protetto. Hanno ricevuto solo l'audio del testo.</p>
+  <h2 class="h">La sperimentazione sul campo</h2>
+  <p>Prima di portare Cara Amica in uno spazio pubblico, il testo è stato testato su corpi reali.</p>
+  <p>Un gruppo di volontarie, persone che nella vita non danzano, non si muovono per professione, non hanno alcun legame con la danza contemporanea, si è ritrovato in un parco, in un ambiente protetto dagli sguardi giudicanti del mondo. Dopo un'introduzione che portasse il corpo verso una predisposizione di calma e ascolto, hanno ricevuto solo l'audio di Cara Amica.</p>
+  <p>Il criterio di misurazione era brutalmente semplice: il testo funziona se il corpo si muove. L'immobilità avrebbe decretato il fallimento. Già alzare un braccio è un atto per un corpo che non ha mai dato a se stesso il permesso di farlo.</p>
   <p class="quote">I corpi si sono mossi. Le riprese sono dinamiche. La magia è avvenuta.</p>
 
   <h2 class="h">L'installazione</h2>
-  <p>La prima tappa pubblica è un'installazione: la spettatrice entra in uno spazio piccolo, raccolto. Sente l'audio in loop. Vede, in una ripresa in loop, i corpi delle volontarie muoversi sotto quello stesso testo. Non è chiamata a muoversi — è testimone. Ma il sistema dei neuroni specchio risponde comunque, alla parola e all'immagine insieme.</p>
+  <p>La prima tappa pubblica di Cartografia del Gesto è un'installazione.</p>
+  <p>La spettatrice entra in uno spazio piccolo, raccolto. Sente l'audio di Cara Amica in loop — la voce, il testo, la musica che lo sostiene. Vede, in una ripresa in loop, corpi che si muovono sotto quello stesso testo: le volontarie della sperimentazione, diventate testimoni e modelle.</p>
+  <p>La spettatrice non è chiamata a muoversi. Non c'è un'istruzione, non c'è un'aspettativa. È solo testimone. Ma il testo lavora nella corteccia premotoria, nei neuroni specchio, nel sistema nervoso autonomo. La persona riceve simultaneamente due stimoli: quello uditivo del testo e quello visivo del corpo che risponde al testo. È una doppia attivazione: il sistema mirror risponde sia alla parola che all'immagine del gesto.</p>
+  <p>Se il corpo vuole rispondere, lo spazio è lì. Senza obbligo, senza giudizio. Come diceva Merleau-Ponty, il corpo vivo non aspetta il permesso — la mente agisce, e la mente segue.</p>
   <p class="quote">Perché il corpo sa. Lo ha sempre saputo.</p>
+
+  <!-- VIDEO DELL'INSTALLAZIONE
+       Carica il video su YouTube (anche come "non in elenco" se non vuoi che sia
+       pubblicamente cercabile), poi prendi l'ID del video dal link.
+       Esempio: se il link è https://youtube.com/watch?v=ABC123XYZ
+       l'ID è la parte dopo "v=", cioè: ABC123XYZ
+       Sostituisci INSERISCI-ID-VIDEO qui sotto con quell'ID -->
+  <div class="video-block">
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/jxIYpYvPfy4" title="Cartografia del Gesto — installazione" allowfullscreen></iframe>
+    </div>
+    <p class="video-caption">Riprese dall'installazione.</p>
+  </div>
 
   <div class="credits">
     <div class="credits-row"><span>Voce</span><b>Giuseppe Parisi</b></div>
     <div class="credits-row"><span>Volontarie</span><b>Rebecca Morgante, Nicole Piccini, Davide Sebastianutto</b></div>
-    <div class="credits-row"><span>Ricerca</span><b>Those who dance, Lisbona</b></div>
+    <div class="credits-row"><span>Ricerca</span><b>Negli spazi di Those who dance, Lisbona</b></div>
+  </div>
+
+  <h2 class="h">Riferimenti scientifici e artistici</h2>
+  <div class="refs">
+    <p><strong>Scientifico-neurologici</strong></p>
+    <p>Berthoz, A. (1997). Il senso del movimento.</p>
+    <p>Damasio, A. (1994). L'errore di Cartesio.</p>
+    <p>Gallese, V., Lakoff, G. (2005). The brain's concepts: the role of the sensory-motor system in conceptual knowledge. Cognitive Neuropsychology, 22(3-4).</p>
+    <p style="margin-top:1.2rem;"><strong>Artistico-filosofici</strong></p>
+    <p>Laban, R. (1950). The Mastery of Movement.</p>
+    <p>Merleau-Ponty, M. (1945). Fenomenologia della percezione. (trad. it. Bompiani, 2003).</p>
   </div>
 
   <div class="divider"></div>
