@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chi sono — Allegra Palù</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{
+  --crema:#FAF6F1;
+  --rosa:#C9A49A;
+  --rosa-chiaro:#EDD8D3;
+  --rosa-pallido:#F5EDEA;
+  --terracotta:#B98C7A;
+  --terracotta-dark:#A07560;
+  --inchiostro:#4A3530;
+  --muted:#8A7572;
+  --border:#E2D5D1;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--crema);color:var(--inchiostro);font-weight:300;font-size:16px;line-height:1.7;}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;
+  background:var(--crema);border-bottom:1px solid var(--border);
+}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;color:var(--inchiostro);text-decoration:none;}
+.back{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.back:hover{color:var(--terracotta-dark);}
+
+.cover{width:100%;height:55vh;object-fit:cover;display:block;margin-top:64px;background:var(--rosa-chiaro);}
+
+.container{max-width:720px;margin:0 auto;padding:5rem 2rem 7rem;}
+.eyebrow{font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--terracotta-dark);margin-bottom:1.5rem;}
+.title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.2rem);font-weight:400;font-style:italic;line-height:1.2;margin-bottom:2.5rem;color:var(--inchiostro);}
+
+h2.h{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;margin:3.5rem 0 1.4rem;color:var(--inchiostro);}
+p{font-size:1.05rem;line-height:1.85;color:var(--inchiostro);margin-bottom:1.3rem;}
+.tagline{font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;color:var(--terracotta-dark);margin-bottom:1rem;}
+.fase{margin-top:2.2rem;}
+.fase-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:var(--terracotta-dark);margin-bottom:0.6rem;}
+
+/* TIMELINE — percorso */
+.timeline{margin-top:1.5rem;}
+.tappa{display:grid;grid-template-columns:110px 1fr;gap:1.5rem;padding:1.6rem 0;border-bottom:1px solid var(--border);}
+.tappa-anno{font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;color:var(--terracotta-dark);}
+.tappa-corpo h3{font-size:1rem;font-weight:500;color:var(--inchiostro);margin-bottom:0.4rem;}
+.tappa-corpo p{font-size:0.92rem;color:var(--muted);margin-bottom:0;}
+
+/* RUOLI ATTUALI */
+.ruoli{display:flex;flex-direction:column;margin-top:1.5rem;}
+.ruolo{padding:1.6rem 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:baseline;gap:2rem;}
+.ruolo h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:400;}
+.ruolo p{font-size:0.88rem;color:var(--muted);text-align:right;max-width:360px;margin-bottom:0;}
+
+/* PLACEHOLDER VISIVO — da rimuovere quando il contenuto è pronto */
+.todo{background:var(--rosa-pallido);border:1px dashed var(--terracotta);border-radius:3px;padding:1.3rem 1.5rem;font-size:0.85rem;color:var(--terracotta-dark);margin:1.2rem 0 2rem;}
+.todo b{display:block;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.4rem;}
+
+.tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem;}
+.tag{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.85rem;border:1px solid var(--border);color:var(--muted);border-radius:20px;}
+
+.divider{width:40px;height:1px;background:var(--terracotta);margin:4rem 0;}
+.back-link{display:inline-block;font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--terracotta);padding-bottom:2px;}
+
+footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--rosa-chiaro);}
+footer span{font-size:0.72rem;color:var(--muted);}
+
+@media (max-width:768px){
+  nav{padding:1rem 1.5rem;}
+  .container{padding:3.5rem 1.5rem 5rem;}
+  .tappa{grid-template-columns:1fr;gap:0.4rem;}
+  .ruolo{flex-direction:column;gap:0.4rem;}
+  .ruolo p{text-align:left;}
+  footer{flex-direction:column;gap:0.5rem;text-align:center;padding:2rem 1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Allegra Palù</a>
+  <a href="index.html#chi" class="back">← torna alla home</a>
+</nav>
+
+<!-- Foto di copertina: puoi usare la stessa del ritratto o una diversa -->
+<img class="cover" src="chi-sono-cover.jpg" alt="Allegra Palù">
+
+<div class="container">
+  <span class="eyebrow">Chi sono</span>
+  <h1 class="title">Il percorso che mi ha portata qui</h1>
+
+  <h2 class="h" style="margin-top:0;">L'inizio: geografie e sottrazione</h2>
+  <p class="tagline">L'essenzialità è una scelta di campo.</p>
+  <p>Il mio modo di guardare le cose si è formato lontano dai monitor, tra le distese di roccia e vento di Fuerteventura. In quell'isola ho capito che la bellezza e l'efficacia non nascono dall'aggiungere, ma dal togliere. Quando c'è troppo rumore, la voce si perde.</p>
+  <p>Questo viaggio continuo tra paesaggi essenziali e geografie diverse ha cambiato radicalmente il mio approccio al lavoro: che io stia curando la comunicazione di un grande evento o riordinando la logistica di un progetto, il mio primo istinto è sempre quello di eliminare il superfluo per far emergere il nucleo, la verità di una storia.</p>
+
+  <h2 class="h">Il centro: l'osservazione e il ritmo</h2>
+  <p class="tagline">Dalla platea al dietro le quinte.</p>
+  <p>Sono cresciuta frequentando i teatri e i festival. Seduta in platea, ho imparato presto a non subire passivamente quello che accadeva sul palco, ma a studiarne i meccanismi, i tempi, l'impatto sul pubblico. Quel ruolo di osservatrice distante è diventato la mia postura professionale. Il mio posto non è sotto i riflettori, ma al fianco di chi crea, traducendo la complessità di un'idea in una struttura solida, comprensibile e comunicabile.</p>
+  <p class="tagline">La precisione della parola.</p>
+  <p>Per me la scrittura è una questione di metrica e di ritmo. Ogni testo, che sia un saggio critico o una micro-narrazione digitale, ha un suo peso specifico. Non credo nella comunicazione compulsiva dettata dai flussi degli algoritmi; credo in una comunicazione lenta, che rispetti il tempo e l'intelligenza di chi legge.</p>
+
+  <h2 class="h">Il percorso</h2>
+
+  <div class="fase">
+    <div class="fase-title">Le radici e l'inizio sul campo</div>
+    <p>Il mio percorso inizia con una solida base universitaria incentrata sul marketing culturale e sulle discipline dello spettacolo. Le prime esperienze sul campo avvengono all'interno di uffici organizzativi di festival di rilevanza nazionale: lì, affiancando la produzione dietro le quinte, apprendo da vicino le complesse dinamiche logistiche e di gestione che tengono in piedi un grande evento.</p>
+  </div>
+
+  <div class="fase">
+    <div class="fase-title">La sintesi tra spazio e comunicazione</div>
+    <p>Successivamente, il mio raggio d'azione si amplia unendo l'organizzazione alla cura strategica dell'immagine. Mi specializzo con un percorso avanzato in digital marketing e inizio a coordinare i primi progetti di residenza artistica e audience engagement. Questo periodo è fondamentale per mettere a fuoco un metodo preciso: far dialogare la visione creativa degli artisti con le necessità operative e con il territorio che li ospita.</p>
+  </div>
+
+  <div class="fase">
+    <div class="fase-title">La direzione cross-disciplinare</div>
+    <p>Il consolidamento professionale si traduce nella progettazione e direzione organizzativa di formati festivalieri cross-disciplinari. Sperimento la curatela e lo scouting in contesti che intrecciano linguaggi differenti all'interno di spazi urbani e non convenzionali. Questa fase sul campo affina le mie competenze nella gestione di budget complessi, nel coordinamento di team di produzione e nello sviluppo di strategie per il coinvolgimento di nuove fasce di pubblico.</p>
+  </div>
+
+  <div class="fase">
+    <div class="fase-title">La consulenza e lo sviluppo strategico</div>
+    <p>Oggi la mia attività si muove su un doppio binario, tra la consulenza strategica per grandi festival internazionali e lo sviluppo organizzativo e promozionale di compagnie di teatro d'autore. Gestisco le relazioni istituzionali e la fattibilità tecnica di progetti site-specific, dedicando particolare attenzione alla valorizzazione e al posizionamento digitale di nuove produzioni e giovani realtà europee.</p>
+  </div>
+
+  <h2 class="h">Cosa faccio oggi</h2>
+  <div class="ruoli">
+    <div class="ruolo">
+      <h3>Mittelfest</h3>
+      <p>Social media e narrazione del festival.</p>
+    </div>
+    <div class="ruolo">
+      <h3>Cuocolo / Bosetti</h3>
+      <p>Affiancamento organizzativo, curatoriale e gestione dell'immagine artistica.</p>
+    </div>
+    <div class="ruolo">
+      <h3>Kaleidoscienza</h3>
+      <p>Organizzatrice e curatrice del festival Diversimili.</p>
+    </div>
+  </div>
+
+  <h2 class="h">Ambiti di competenza</h2>
+  <div class="tags">
+    <span class="tag">Copywriting</span>
+    <span class="tag">Social media</span>
+    <span class="tag">Storytelling</span>
+    <span class="tag">Organizzazione eventi</span>
+    <span class="tag">Curatela</span>
+  </div>
+
+  <div class="divider"></div>
+  <a href="index.html#chi" class="back-link">← torna alla home</a>
+</div>
+
+<footer>
+  <span>Allegra Palù — comunicazione culturale</span>
+  <span>Friuli Venezia Giulia</span>
+</footer>
+
+</body>
+</html>
