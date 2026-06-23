@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il senso di una fine — Allegra Palù</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{
+  --crema:#FAF6F1;
+  --rosa:#C9A49A;
+  --rosa-chiaro:#EDD8D3;
+  --rosa-pallido:#F5EDEA;
+  --terracotta:#B98C7A;
+  --terracotta-dark:#A07560;
+  --inchiostro:#4A3530;
+  --muted:#8A7572;
+  --border:#E2D5D1;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--crema);color:var(--inchiostro);font-weight:300;font-size:16px;line-height:1.7;}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  padding:1rem 4rem;display:flex;justify-content:space-between;align-items:center;
+  background:var(--crema);border-bottom:1px solid var(--border);
+}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;color:var(--inchiostro);text-decoration:none;}
+.back{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.back:hover{color:var(--terracotta-dark);}
+
+.cover{width:100%;height:55vh;object-fit:cover;display:block;margin-top:64px;background:var(--rosa-chiaro);}
+
+.container{max-width:700px;margin:0 auto;padding:5rem 2rem 7rem;}
+.eyebrow{font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--terracotta-dark);margin-bottom:1.5rem;}
+.title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:400;font-style:italic;line-height:1.2;margin-bottom:0.6rem;color:var(--inchiostro);}
+.subtitle{font-size:0.85rem;color:var(--muted);letter-spacing:0.04em;margin-bottom:2.5rem;}
+
+h2.h{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;margin:3rem 0 1.2rem;color:var(--inchiostro);}
+.h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:var(--terracotta-dark);margin:1.8rem 0 0.7rem;}
+p{font-size:1rem;line-height:1.85;color:var(--inchiostro);margin-bottom:1.3rem;}
+
+.note{background:var(--rosa-pallido);border-left:3px solid var(--terracotta);padding:1.3rem 1.6rem;margin-bottom:2.5rem;font-size:0.85rem;color:var(--muted);line-height:1.7;}
+.note b{color:var(--inchiostro);}
+
+.blocco{margin-bottom:2.8rem;padding:2rem 2.2rem;background:var(--rosa-pallido);border-radius:3px;}
+.blocco-n{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--terracotta-dark);margin-bottom:0.5rem;}
+.blocco-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-style:italic;color:var(--inchiostro);margin-bottom:0.8rem;}
+.direzione{font-size:0.85rem;color:var(--muted);line-height:1.7;font-style:italic;margin-bottom:1.3rem;}
+.verse{font-family:'Playfair Display',serif;font-size:1rem;line-height:1.85;color:var(--inchiostro);margin-bottom:0;}
+
+.credits{margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border);}
+.credits-row{display:flex;justify-content:space-between;font-size:0.85rem;padding:0.5rem 0;color:var(--muted);gap:1rem;}
+.credits-row b{color:var(--inchiostro);font-weight:400;text-align:right;}
+
+.divider{width:40px;height:1px;background:var(--terracotta);margin:4rem 0;}
+.back-link{display:inline-block;font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--terracotta);padding-bottom:2px;}
+
+footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--rosa-chiaro);}
+footer span{font-size:0.72rem;color:var(--muted);}
+
+@media (max-width:768px){
+  nav{padding:1rem 1.5rem;}
+  .container{padding:3.5rem 1.5rem 5rem;}
+  .blocco{padding:1.5rem 1.5rem;}
+  .credits-row{flex-direction:column;gap:0.2rem;}
+  .credits-row b{text-align:left;}
+  footer{flex-direction:column;gap:0.5rem;text-align:center;padding:2rem 1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Allegra Palù</a>
+  <a href="index.html#percorsi" class="back">← percorsi di ricerca</a>
+</nav>
+
+<!-- Foto di copertina: sostituisci con un'immagine tua -->
+<img class="cover" src="ritratto.jpg" alt="Il senso di una fine" onerror="this.style.display='none'">
+
+<div class="container">
+  <span class="eyebrow">Scrittura — testo per musica</span>
+  <h1 class="title">Il senso di una fine</h1>
+  <p class="subtitle">Barre su memoria, gioventù e compromesso</p>
+
+  <p>Julian Barnes, in <em>Il senso di una fine</em>, fa un lavoro chirurgico sulla distorsione della memoria: da giovani pensiamo di scrivere la storia, da adulti capiamo che la storia ha scritto noi, lasciandoci addosso solo i segni dei compromessi e delle traiettorie che si dividono.</p>
+  <p>A livello somatico, il testo passa dall'espansione cinetica — il corpo leggero, i riflessi pronti della giovinezza, la cassa del Cocoricò che fa vibrare lo sterno — alla gravità dell'età adulta: la rigidità muscolare dei compromessi, il fiato più corto, il peso delle cose non dette.</p>
+
+  <p>La ricerca letteraria dietro questo testo si muove su tre direttrici fondamentali che collegano la cultura hip-hop/electronic al romanzo di Barnes:</p>
+
+  <div class="h3">La riscrittura del passato e il "trucco del presente"</div>
+  <p>Nel romanzo, il protagonista Tony Webster capisce che la memoria non è un archivio oggettivo, ma un'invenzione che creiamo oggi per giustificare le nostre vite. Il brano adotta questa stessa lente: la nostalgia del Cocoricò o delle rivoluzioni universitarie non è una fotografia reale, ma un "trucco del presente" per sopportare la grigia gravità dei contratti a tempo determinato e della lista della spesa.</p>
+
+  <div class="h3">L'accumulo dei danni e la responsabilità</div>
+  <p>Barnes scriveva: «C'è l'accumulo. C'è la responsabilità. E al di là di queste, c'è l'inquietudine. C'è il grande scompiglio.» Il testo traduce questa esatta epifania nelle barre finali — "Accumuliamo danni, ferite, scuse non dette..." — trasformando la fluidità della giovinezza nella rigidità dell'età adulta.</p>
+
+  <div class="h3">La cassa come metronomo esistenziale</div>
+  <p>La ricerca formale unisce il concetto filosofico del tempo a un elemento prettamente musicale: la cassa del clubbing. La cassa del Cocoricò diventa il battito cardiaco di un'intera generazione, l'unico punto fermo che unisce il ragazzo idealista del passato all'adulto disilluso del presente. È l'eco di una fine che, esattamente come nel titolo di Barnes, continuiamo a reinterpretare per dare un senso all'inizio.</p>
+
+  <div class="note">
+    <b>Struttura</b>
+    16 barre (Strofa 1) + Ritornello + 24 barre (Strofa 2) + Ritornello.
+  </div>
+
+  <div class="blocco">
+    <div class="blocco-n">Strofa 1 — 16 barre</div>
+    <div class="blocco-title">L'Espansione</div>
+    <p class="direzione">Flow rapido, dritto, con una spinta cinetica e i riflessi pronti. Beat energico, nostalgico ma potente.</p>
+    <p class="verse">Avevamo il mondo nel palmo, la pelle tesa e il sangue che spinge, quell'arroganza romantica di chi non si piega e non si dipinge.<br>I libri di storia aperti sul tavolo, l'università come un fronte, ogni discussione era un ponte, ogni idea una rivoluzione all'orizzonte.<br>Le serate passate a cambiare il sistema con un boccale in mano, giuravamo che non saremmo mai andati piano.<br>Eravamo una cerchia di specchi, riflessi di un'unica mente, con le tasche bucate ma il lusso di non avere paura di niente.<br>Poi le macchine cariche, l'autostrada, la nebbia che sale dal mare, la piramide del Cocoricò che comincia a brillare e a chiamare.<br>La cassa che batteva nello sterno, un rito pagano tra la folla, i corpi sudati, l'odore di fumo, la chimica che ci decolla.<br>Ci sentivamo immortali, protetti dentro quella cupola di vetro, con gli amici di sempre di fianco e nessun bisogno di guardare indietro.<br>Eravamo scintille nel buio, convinti che il tempo giocasse con noi, senza sapere che il conto dei giorni ti fotte ed arriva per poi.</p>
+  </div>
+
+  <div class="blocco">
+    <div class="blocco-n">Ritornello</div>
+    <div class="blocco-title">L'Illusione del Tempo</div>
+    <p class="direzione">Apertura melodica distesa, fluttuante, con synth spaziosi e un senso di sospensione.</p>
+    <p class="verse">Ma il tempo è un elastico che si tende e poi torna indietro, lasciando i ricordi incastrati tra il fango e il cemento.<br>Dov'è andato quel senso di una fine che sembrava un inizio? Le aspettative bruciate sull'altare di ogni singolo vizio.<br>E resta soltanto l'eco di quella cassa che ci ha cresciuti, mentre contiamo i passi e i pezzi che abbiamo perduti.</p>
+  </div>
+
+  <div class="blocco">
+    <div class="blocco-n">Strofa 2 — 24 barre</div>
+    <div class="blocco-title">La Gravità e i Compromessi</div>
+    <p class="direzione">Il flow rallenta, si fa più pesante, sincopato, adagiato sui bassi. Voce più scura, a fari spenti.</p>
+    <p class="verse">E poi ti svegli una mattina e la gravità ha cambiato le regole del gioco, scopri che il fuoco che avevi dentro è diventato soltanto un rinfocolare poco.<br>I pensieri rivoluzionari si spengono dentro i contratti a tempo determinato, la vita ti mette davanti al bancone del bar e ti chiede cos'hai combinato.<br>Arrivano i fallimenti, quelli silenziosi che non fanno rumore nei post, le paure che ti bloccano il collo la notte, quando calcoli il cost.<br>I compromessi che firmi col sangue sorridendo per sopravvivere, mentre scendi a patti con l'ansia e dimentichi come si fa a ridere.<br>Gli amici di quelle serate universitarie prendono strade diverse, diventano numeri in rubrica, facce sbiadite nelle storie perse.<br>Chi si è sposato per noia, chi è scappato lontano a cercare la sorte, chi ha chiuso i sogni in un cassetto e ha tirato le mandate alla porta.<br>La nostalgia non è un sentimento, è una contrattura nella schiena, un muscolo rigido che ti ricorda la fine di un'epoca piena.<br>Ti guardi allo specchio e misuri la distanza tra ciò che speravi e ciò che sei, tra i discorsi filosofici e la lista della spesa dei tuoi giorni dei.<br>Ma se chiudo gli occhi per un secondo, sento ancora la terra che trema, il laser verde del Cocoricò che tagliava la stanza e svoltava la pena.<br>Quell'illusione somatica di essere parte di un unico battito, un'estasi cinetica che si è consumata nello spazio di un attimo.<br>Adesso camminiamo guardinghi, con le spalle curve e il passo prudente, Julian Barnes lo sapeva che la memoria è un trucco del presente.<br>Accumuliamo danni, ferite, scuse non dette e rancori da bar, mentre il passato si allontana veloce come la scia di una car.</p>
+  </div>
+
+  <div class="blocco">
+    <div class="blocco-n">Ritornello</div>
+    <div class="blocco-title">L'Illusione del Tempo</div>
+    <p class="direzione">Apertura melodica distesa, fluttuante, con synth spaziosi e un senso di sospensione.</p>
+    <p class="verse">Ma il tempo è un elastico che si tende e poi torna indietro, lasciando i ricordi incastrati tra il fango e il cemento.<br>Dov'è andato quel senso di una fine che sembrava un inizio? Le aspettative bruciate sull'altare di ogni singolo vizio.<br>E resta soltanto l'eco di quella cassa che ci ha cresciuti, mentre contiamo i passi e i pezzi che abbiamo perduti.</p>
+  </div>
+
+  <div class="credits">
+    <div class="credits-row"><span>Riferimento letterario</span><b>Julian Barnes, Il senso di una fine</b></div>
+  </div>
+
+  <div class="divider"></div>
+  <a href="index.html#percorsi" class="back-link">← torna ai percorsi di ricerca</a>
+</div>
+
+<footer>
+  <span>Allegra Palù — comunicazione culturale</span>
+  <span>Friuli Venezia Giulia</span>
+</footer>
+
+</body>
+</html>
