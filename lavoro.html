@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dietro le quinte — Allegra Palù</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{
+  --crema:#FAF6F1;
+  --rosa:#C9A49A;
+  --rosa-chiaro:#EDD8D3;
+  --rosa-pallido:#F5EDEA;
+  --terracotta:#B98C7A;
+  --terracotta-dark:#A07560;
+  --inchiostro:#4A3530;
+  --muted:#8A7572;
+  --border:#E2D5D1;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--crema);color:var(--inchiostro);font-weight:300;font-size:16px;}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  padding:1rem 4rem;
+  display:flex;justify-content:space-between;align-items:center;
+  background:var(--crema);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;letter-spacing:0.03em;color:var(--inchiostro);text-decoration:none;}
+.nav-links{display:flex;gap:2rem;align-items:center;}
+.nav-links a{text-decoration:none;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);transition:color 0.2s;}
+.nav-links a:hover{color:var(--terracotta-dark);}
+.nav-cta{background:var(--terracotta);color:white !important;padding:0.55rem 1.3rem;border-radius:30px;}
+.nav-cta:hover{background:var(--terracotta-dark);color:white !important;}
+
+/* PAGE HEADER */
+.page-header{padding:9rem 4rem 3rem;}
+.page-eyebrow{font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--terracotta-dark);display:block;margin-bottom:1.2rem;}
+.page-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,3.4rem);font-weight:400;font-style:italic;color:var(--inchiostro);line-height:1.1;}
+.page-title em{color:var(--terracotta-dark);}
+
+/* SEZIONE generica */
+.s{padding:4rem 4rem 5.5rem;}
+.s-tag{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--terracotta-dark);display:block;margin-bottom:1.5rem;}
+.s-h2{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:400;line-height:1.1;margin-bottom:0;color:var(--inchiostro);}
+.s-h2 em{font-style:italic;color:var(--terracotta-dark);}
+.alt-bg{background:var(--rosa-pallido);}
+.alt-bg2{background:var(--rosa-chiaro);}
+
+/* SERVIZI */
+.servizi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:3rem;}
+.srv{background:var(--crema);padding:2.6rem 2.2rem;border:1px solid var(--border);border-radius:3px;}
+.srv-n{font-family:'Playfair Display',serif;font-size:2.1rem;font-style:italic;color:var(--terracotta);opacity:0.55;line-height:1;margin-bottom:1.2rem;}
+.srv-h{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--inchiostro);font-weight:400;margin-bottom:0.8rem;}
+.srv-p{font-size:0.85rem;line-height:1.75;color:var(--muted);}
+
+/* QUIZ */
+.quiz-intro{max-width:560px;font-size:0.9rem;line-height:1.8;color:var(--muted);margin-top:1rem;margin-bottom:2rem;}
+.quiz-start-btn{display:inline-block;padding:0.85rem 2rem;background:var(--terracotta-dark);color:white;border:none;border-radius:30px;font-family:'DM Sans',sans-serif;font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;}
+.quiz-start-btn:hover{background:var(--inchiostro);}
+.quiz-duration{display:block;margin-top:1rem;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);}
+.quiz-box{background:var(--crema);border:1px solid var(--border);padding:2.5rem;max-width:680px;margin-top:1rem;}
+.quiz-q{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;margin-bottom:1.5rem;line-height:1.4;color:var(--inchiostro);}
+.quiz-options{display:flex;flex-direction:column;gap:0.7rem;margin-bottom:2rem;}
+.quiz-opt{padding:0.85rem 1.2rem;border:1px solid var(--border);background:transparent;text-align:left;font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--inchiostro);cursor:pointer;transition:all 0.2s;font-weight:300;}
+.quiz-opt:hover{border-color:var(--terracotta);background:var(--rosa-pallido);}
+.quiz-opt.selected{border-color:var(--terracotta-dark);background:var(--terracotta);color:white;}
+.quiz-nav{display:flex;justify-content:space-between;align-items:center;}
+.quiz-step{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);}
+.quiz-btn{padding:0.75rem 1.8rem;background:var(--terracotta-dark);color:white;border:none;font-family:'DM Sans',sans-serif;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;}
+.quiz-btn:hover{background:var(--inchiostro);}
+.quiz-result{display:none;padding:2rem;background:var(--rosa-pallido);border-left:3px solid var(--terracotta);}
+.quiz-result.show{display:block;}
+.quiz-result-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-style:italic;margin-bottom:0.5rem;color:var(--inchiostro);}
+.quiz-result-desc{font-size:0.85rem;line-height:1.7;color:var(--muted);margin-bottom:1.2rem;}
+.quiz-result-cta{display:inline-block;padding:0.7rem 1.5rem;background:var(--terracotta-dark);color:white;text-decoration:none;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;}
+
+/* PACCHETTI */
+.pkt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1px solid var(--border);margin-top:3rem;}
+.pkt{padding:2.5rem;background:var(--crema);transition:background 0.2s;}
+.pkt:hover{background:var(--rosa-pallido);}
+.pkt.feat{background:var(--rosa-chiaro);}
+.pkt.feat:hover{background:var(--rosa);}
+.pkt-lbl{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--terracotta-dark);display:block;margin-bottom:0.8rem;}
+.pkt-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:400;margin-bottom:0.3rem;color:var(--inchiostro);}
+.pkt-price{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:400;margin-bottom:0.3rem;color:var(--inchiostro);line-height:1.3;}
+.pkt-price small{font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:400;color:var(--muted);display:block;margin-top:0.4rem;}
+.pkt-list{list-style:none;border-top:1px solid var(--border);margin:1.5rem 0 2rem;padding-top:0.5rem;}
+.pkt-list li{font-size:0.8rem;padding:0.5rem 0;border-bottom:1px solid var(--border);color:var(--muted);display:flex;gap:0.5rem;}
+.pkt-list li::before{content:'—';opacity:0.5;flex-shrink:0;color:var(--terracotta);}
+.pkt-btn{display:block;text-align:center;padding:0.75rem;border:1px solid var(--terracotta-dark);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;color:var(--terracotta-dark);transition:all 0.2s;}
+.pkt-btn:hover{background:var(--terracotta-dark);color:white;}
+
+/* POSTER — riusa lo stile percorso delle card */
+.percorsi-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem;}
+.percorso{background:var(--crema);border:1px solid var(--border);overflow:hidden;text-decoration:none;color:inherit;display:block;}
+.percorso-body{padding:2.2rem;}
+.percorso-tag{font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--terracotta-dark);margin-bottom:0.9rem;display:block;}
+.percorso-title{font-family:'Playfair Display',serif;font-size:1.45rem;font-style:italic;color:var(--inchiostro);margin-bottom:0.9rem;line-height:1.3;}
+.percorso-desc{font-size:0.85rem;line-height:1.75;color:var(--muted);margin-bottom:1.2rem;}
+.percorso-link{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--inchiostro);border-bottom:1px solid var(--terracotta);padding-bottom:2px;}
+
+/* FOOTER */
+footer{
+  padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;
+  background:var(--rosa-chiaro);
+}
+.f-logo{font-family:'Playfair Display',serif;font-size:0.9rem;font-style:italic;color:var(--inchiostro);opacity:0.65;}
+.f-info{font-size:0.68rem;color:var(--muted);text-align:right;letter-spacing:0.06em;}
+
+@media (max-width:900px){
+  nav{padding:1rem 1.5rem;}
+  .nav-links{gap:1rem;flex-wrap:wrap;}
+  .nav-links a{font-size:0.6rem;}
+  .page-header{padding:7rem 1.5rem 2rem;}
+  .s{padding:3rem 1.5rem;}
+  .servizi-grid{grid-template-columns:1fr;}
+  .pkt-grid{grid-template-columns:1fr;}
+  .percorsi-grid{grid-template-columns:1fr;}
+  footer{flex-direction:column;gap:0.8rem;text-align:center;padding:2rem 1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Allegra Palù</a>
+  <div class="nav-links">
+    <a href="index.html#chi">Chi sono</a>
+    <a href="lavoro.html">Lavoro</a>
+    <a href="index.html#percorsi">Percorsi</a>
+    <a href="index.html#contatti">Contatti</a>
+    <a href="index.html#contatti" class="nav-cta">Scrivimi</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <span class="page-eyebrow">Cosa offro</span>
+  <h1 class="page-title">Dietro le <em>quinte</em></h1>
+</div>
+
+<!-- COME LAVORO -->
+<div class="s" id="servizi">
+  <div class="servizi-grid">
+    <div class="srv">
+      <div class="srv-n">01</div>
+      <div class="srv-h">Storytelling</div>
+      <p class="srv-p">Costruire narrazioni che restano. Per festival, teatri, gallerie, musei, compagnie, ogni realtà culturale che vuole essere raccontata, non solo annunciata.</p>
+    </div>
+    <div class="srv">
+      <div class="srv-n">02</div>
+      <div class="srv-h">Consulenza comunicazione</div>
+      <p class="srv-p">Analisi, strategia, voce. Accompagno chi lavora in cultura a trovare il proprio modo di stare nel mondo.</p>
+    </div>
+    <div class="srv">
+      <div class="srv-n">03</div>
+      <div class="srv-h">Gestione social</div>
+      <p class="srv-p">Presenze digitali costruite con intenzione.</p>
+    </div>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div class="s alt-bg2" id="quiz">
+  <span class="s-tag">Lo specchio impietoso</span>
+  <h2 class="s-h2">Fai il <em>test</em></h2>
+  <p class="quiz-intro">Tre domande. Nessun giudizio. Alla fine ti dico esattamente cosa ti serve — o almeno, quello che penso io.</p>
+
+  <div id="quiz-start-extra">
+    <button class="quiz-start-btn" onclick="startQuiz()">Inizia il test →</button>
+    <span class="quiz-duration">≈ 30 secondi</span>
+  </div>
+
+  <div class="quiz-box" id="quiz-box" style="display:none;">
+    <div id="quiz-content">
+      <div class="quiz-q" id="q-text"></div>
+      <div class="quiz-options" id="q-opts"></div>
+      <div class="quiz-nav">
+        <span class="quiz-step" id="q-step"></span>
+        <button class="quiz-btn" onclick="nextQ()">Avanti →</button>
+      </div>
+    </div>
+    <div class="quiz-result" id="quiz-result">
+      <div class="quiz-result-title" id="r-title"></div>
+      <div class="quiz-result-desc" id="r-desc"></div>
+      <a href="#pacchetti" class="quiz-result-cta" id="quiz-cta">Vedi il pacchetto →</a>
+    </div>
+  </div>
+</div>
+
+<!-- PACCHETTI -->
+<div class="s" id="pacchetti">
+  <span class="s-tag">I miei pacchetti</span>
+  <h2 class="s-h2">Investire in<br><em>presenza</em></h2>
+  <div class="pkt-grid">
+    <div class="pkt" id="pkt-voce">
+      <span class="pkt-lbl">Essenziale</span>
+      <div class="pkt-name">La Voce</div>
+      <div class="pkt-price">€800<small>mese</small></div>
+      <ul class="pkt-list">
+        <li>Consulenza editoriale su testi social e newsletter</li>
+        <li>Costruzione e affinamento del tono di voce</li>
+        <li>Riscrittura guidata: lavoriamo insieme sui testi esistenti</li>
+        <li>Incontro per allineare obiettivi e risultati</li>
+        <li>Si rinnova solo se vuoi continuare insieme, mese per mese</li>
+      </ul>
+      <a href="index.html#contatti" class="pkt-btn">Parliamone</a>
+    </div>
+    <div class="pkt feat" id="pkt-presenza">
+      <span class="pkt-lbl">Consigliato</span>
+      <div class="pkt-name">La Presenza</div>
+      <div class="pkt-price">€1.500<small>mese</small></div>
+      <ul class="pkt-list">
+        <li>Tutto il contenuto del pacchetto La Voce</li>
+        <li>Costruzione e gestione del sito web</li>
+        <li>Piano editoriale completo per il mese</li>
+        <li>Consulenza finale dedicata a renderti autonoma nella gestione</li>
+        <li>Si rinnova solo se vuoi continuare insieme, mese per mese</li>
+      </ul>
+      <a href="index.html#contatti" class="pkt-btn">Iniziamo</a>
+    </div>
+    <div class="pkt" id="pkt-regia">
+      <span class="pkt-lbl">Percorso in due fasi</span>
+      <div class="pkt-name">La Regia</div>
+      <div class="pkt-price">€1.500<small>una tantum, poi €500/mese</small></div>
+      <ul class="pkt-list">
+        <li>Fase 1 — Costruzione: sito, identità narrativa, strategia completa</li>
+        <li>Fase 2 — Gestione continuativa mese per mese</li>
+        <li>Pensato per lanci, tour, progetti complessi</li>
+        <li>Puoi fermarti dopo la Fase 1 se preferisci gestire tu</li>
+      </ul>
+      <a href="index.html#contatti" class="pkt-btn">Richiedi un preventivo</a>
+    </div>
+  </div>
+</div>
+
+<!-- POSTER — il carattere Cioè del sito -->
+<div class="s alt-bg2" id="poster">
+  <span class="s-tag">Da staccare e tenere</span>
+  <h2 class="s-h2">I <em>poster</em></h2>
+  <div class="percorsi-grid">
+    <div class="percorso" style="cursor:default;">
+      <div class="percorso-body">
+        <span class="percorso-tag">Comunicazione culturale</span>
+        <div class="percorso-title">Check list per la costruzione di un evento</div>
+        <p class="percorso-desc">Un poster da stampare, appendere, o leggere alle 2 di notte quando stai mandando la quinta versione del comunicato stampa.</p>
+        <a href="checklist-festival.pdf" download class="percorso-link" style="text-decoration:none;">Scarica il PDF →</a>
+      </div>
+    </div>
+    <div class="percorso" style="cursor:default;opacity:0.55;">
+      <div class="percorso-body">
+        <span class="percorso-tag">Prossimamente</span>
+        <div class="percorso-title" style="font-style:italic;">Il prossimo poster arriva presto</div>
+        <p class="percorso-desc">Ruota ogni tot. Scrivimi se vuoi essere tra le prime a saperlo.</p>
+        <a href="index.html#contatti" class="percorso-link">Scrivimi →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo">Allegra Palù</div>
+  <div class="f-info">P.IVA 03051940306 · Friuli Venezia Giulia</div>
+</footer>
+
+<script>
+const questions=[
+  {q:"Guardati allo specchio e descrivi la tua organizzazione culturale con lo stesso livello di onestà di un breakdown delle 3 del mattino:",opts:[
+    {text:"Facciamo cose talmente di nicchia, belle e segrete che a volte mi chiedo se esistiamo davvero. Praticamente un club del libro clandestino.",type:"A"},
+    {text:"Il nostro sito web ha lo stesso font di Space Jam, la grafica di Windows 98 e la bio di Instagram ferma al solstizio d'estate del 2022.",type:"B"},
+    {text:"Pubblichiamo tantissimo, ma urliamo nel vuoto. Se domani sparissimo, i nostri follower penserebbero solo a un glitch dell'algoritmo.",type:"C"},
+    {text:"Panico totale: c'è IL FESTIVAL/L'EVENTO della vita tra un mese. Adesso esiste solo quello, il resto del mondo è sbiadito sullo sfondo.",type:"D"}
+  ]},
+  {q:"Parliamo di tempo. Quanto ne hai DAVVERO da dedicare alla comunicazione questa settimana senza rischiare il burnout?",opts:[
+    {text:"Zero assoluto. Sto rispondendo a questo quiz mentre piango in bagno tra una riunione di produzione e un bando ministeriale.",type:"A"},
+    {text:"Avrei anche un paio d'ore, ma le passo a fissare la schermata vuota di Canva cercando l'ispirazione divina che non arriva.",type:"B"},
+    {text:"Ho del tempo, ho le idee, ho la foga, ma zero mappa. Corro fortissimo in cerchio come un Sim con la barra dell'energia rossa.",type:"C"},
+    {text:"È un progetto temporaneo, una fiammata. Non voglio una struttura fissa, voglio solo sopravvivere alle prossime tre settimane.",type:"D"}
+  ]},
+  {q:"Apriamo il cassetto delle paranoie: cosa ti toglie il sonno quando pensi al feed o alla cartella stampa?",opts:[
+    {text:"Il terrore di essere invisibili. Di fare una cosa pazzesca e vederla morire con 4 like (di cui uno è di mia mamma).",type:"A"},
+    {text:"Il morire di noia. Sembrare la copia sbiadita, istituzionale e ingessata di tutti gli altri festival d'Europa.",type:"B"},
+    {text:"L'ansia da prestazione: produrre, produrre, produrre per poi accorgersi che non stiamo parlando a nessuno.",type:"C"},
+    {text:"Il tempismo tragico: accorgersi che il pubblico giusto scoprirà l'evento esattamente il giorno dopo la replica finale.",type:"D"}
+  ]}
+];
+const profili={
+  A:{titolo:"IL SEGRETO MEGLIO CUSTODITO DELLE SALE",descrizione:"Hai progetti stupendi ma soffri della sindrome del 'fantasma dell'opera': sei lì, fai magie, ma nessuno fuori sa chi sei. La tua comunicazione ha bisogno di uscire dalla platea vuota e trovare il suo pubblico reale. Spoiler: là fuori c'è qualcuno che ti sta cercando.",pkt:"pkt-voce",pktLabel:"La Voce"},
+  B:{titolo:"IL NOSTALGICO DELL'ANALOGICO (SOS VINTAGE)",descrizione:"Ok, il modernariato va di moda, ma non per la comunicazione strategica. Ti spaventa l'idea di snaturarti o di cedere ai trend cringe di TikTok, e preferisci l'immobilismo. Spoiler: si può comunicare in modo contemporaneo e ironico senza perdere un briciolo di dignità istituzionale.",pkt:"pkt-presenza",pktLabel:"La Presenza"},
+  C:{titolo:"IL TROTTOLINO DELL'ALGORITMO",descrizione:"Fai tantissimo, crei contenuti, scrivi, pubblichi... ma senza una bussola. Corri dietro a ogni trend e a ogni formato perdendo di vista la tua vera voce. Meno ansia da prestazione, più strategia lenta: serve una cartografia chiara delle cose che contano davvero.",pkt:"pkt-presenza",pktLabel:"La Presenza"},
+  D:{titolo:"IL POMPIERE DEI FESTIVAL",descrizione:"Vivi in uno stato di costante gestione dell'emergenza. La comunicazione per te è un idrante con cui spegnere gli incendi dell'ultimo minuto prima del debutto. Funziona sul momento, ma che fatica! Hai bisogno di un metodo per respirare anche quando il festival finisce.",pkt:"pkt-regia",pktLabel:"La Regia"}
+};
+let step=0,answers=[],selectedType=null;
+function startQuiz(){
+  document.getElementById('quiz-box').style.display='block';
+  document.getElementById('quiz-start-extra').style.display='none';
+  renderQ();
+}
+function renderQ(){
+  document.getElementById('q-text').textContent=questions[step].q;
+  document.getElementById('q-step').textContent=(step+1)+' / '+questions.length;
+  const opts=document.getElementById('q-opts');
+  opts.innerHTML='';
+  questions[step].opts.forEach((o)=>{
+    const b=document.createElement('button');
+    b.className='quiz-opt';b.textContent=o.text;
+    b.onclick=()=>selectOpt(b,o.type);
+    opts.appendChild(b);
+  });
+}
+function selectOpt(el,type){document.querySelectorAll('.quiz-opt').forEach(o=>o.classList.remove('selected'));el.classList.add('selected');selectedType=type;}
+function nextQ(){
+  if(selectedType===null)return;
+  answers.push(selectedType);selectedType=null;step++;
+  if(step>=questions.length){showResult();return;}
+  renderQ();
+}
+function showResult(){
+  const counts={};
+  answers.forEach(t=>counts[t]=(counts[t]||0)+1);
+  let best=answers[0];
+  Object.keys(counts).forEach(t=>{if(counts[t]>counts[best])best=t;});
+  const p=profili[best];
+  document.getElementById('quiz-content').style.display='none';
+  const res=document.getElementById('quiz-result');
+  res.classList.add('show');
+  document.getElementById('r-title').textContent=p.titolo;
+  document.getElementById('r-desc').textContent=p.descrizione;
+  const cta=document.getElementById('quiz-cta');
+  cta.href='#'+p.pkt;
+  cta.textContent='Scopri '+p.pktLabel+' →';
+}
+</script>
+</body>
+</html>
